@@ -1,4 +1,4 @@
 Settings
-Camera = 0
-Authorization Key = BQCCkkOYax9-OttrMp6sF9N8ZLP6udOt9mlnoGL4_xRDU34uhbaWYOwHdx4Lvym85Js1mIPHQwrTA23qPinwri2u2qXVn8Dl-pYXGyQ2zh6uLwzzXTWUnLLqBvuz12KrLhfjfN4ZuCYzmC8Y6GNW0h2X-s05lJ-FhbYy_G3Eff32wqsUwdYsyMVRv7aGCcrDCpg8hvtPtIfDdiQLZ6ltzuD5SkIxrRM
-User ID = melvinj98
+Camera = 1
+Authorization Key = 
+User ID = 
