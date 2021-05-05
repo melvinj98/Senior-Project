@@ -15,5 +15,5 @@ How to run:
 	-Copy "OAuth Token" (CTRL + A to highlight the whole token).
 	-Paste "OAuth Token" into the "Authorization Key" section of the programs settings.
 	-Click "save" in settings window.
-8)Click create playlist 
+7)Click create playlist 
 	-If error occurs change camera value to 0 or 1 in settings
