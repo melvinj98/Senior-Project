@@ -21,8 +21,10 @@ layoutFont = 'Helvetica'
 def settingsMenu():
     cameraValue = settings.getCameraSetting()
     authKey = settings.getAuthKey()
+    userID = settings.getUserID()
 
     layout = [[sg.Text('Camera', font=layoutFont), sg.In(cameraValue, font=layoutFont)],
+              [sg.Text('User ID', font=layoutFont), sg.In(userID, font=layoutFont)],
               [sg.Text('Authorization Key', font=layoutFont), sg.In(authKey, font=layoutFont)],
               [sg.Button('Save'), sg.Button('Exit')]
               ]
@@ -35,7 +37,8 @@ def settingsMenu():
             break
         if event == 'Save':
             settings.changeCamera(values[0])
-            settings.changeAuthKey(values[1])
+            settings.changeUserID(values[1])
+            settings.changeAuthKey(values[2])
             window.close()
 
     window.close()
