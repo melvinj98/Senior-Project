@@ -1,4 +1,3 @@
-Settings
-Camera = 1
-Authorization Key = 
-User ID = 
+1
+Spotify User ID
+Spotify Authorization Token
