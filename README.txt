@@ -5,7 +5,7 @@ How to run:
 	-https://drive.google.com/file/d/1sECnCJMSMRQpz2MrYSb9wi6KbUGYTPv9/view?usp=sharing
 	-https://drive.google.com/drive/folders/16BiW2ycnDkwJERuh8u_6V96q-dgDhDeF?usp=sharing 
 4) Run env\Scripts\activate in command prompt
-5) Run python main.py
+5) Run python gui.py
 6) Go to https://developer.spotify.com/console/get-current-user/
 	-Click get token (no scopes required).
 	-Press "TRY IT".
