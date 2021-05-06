@@ -4,8 +4,10 @@ import random
 
 
 def main(emotion):
-    SPOTIFY_AUTHORIZATION_TOKEN = settings.getAuthKey()
-    SPOTIFY_USER_ID = settings.getUserID()
+    getSettings = settings.getSettings()
+    SPOTIFY_USER_ID = getSettings[1].replace('\n', '')
+    SPOTIFY_AUTHORIZATION_TOKEN = getSettings[2].replace('\n', '')
+
     happy_playlist_id = "1h90L3LP8kAJ7KGjCV2Xfd"
     sad_playlist_id = "37i9dQZF1DX7qK8ma5wgG1"
     neutral_playlist_id = "4PFwZ4h1LMAOwdwXqvSYHd"

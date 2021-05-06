@@ -11,11 +11,13 @@ def main():
     face_classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     classifier = load_model('EmotionDetectionModel.h5')
     class_labels = ['Angry', 'Happy', 'Neutral', 'Sad']
-    camera = int(settings.getCameraSetting())
+    cameraSettings = settings.getSettings()
+    camera = int(cameraSettings[0])
     cap = cv2.VideoCapture(camera)
+
     emotions = []
 
-    while len(emotions) < 100:
+    while len(emotions) < 70:
         ret, frame = cap.read()
         frame = cv2.flip(frame, 1)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -45,7 +47,7 @@ def main():
             else:
                 cv2.putText(frame, 'No Face Found', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
 
-        #cv2.imshow('Emotion Detector', frame)
+        # cv2.imshow('Emotion Detector', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 

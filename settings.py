@@ -1,51 +1,38 @@
-def getCameraSetting():
+def getSettings():
     f = open("settings.txt", "r")
     list_of_lines = f.readlines()
-    cameraSetting = list_of_lines[1].replace('Camera = ', '')
+    try:
+        cameraSetting = list_of_lines[0]
+        userID = list_of_lines[1]
+        authKey = list_of_lines[2]
+    except IndexError:
+        f = open("settings.txt", "w")
 
-    return cameraSetting
+        # default settings values
+        defaultSettings = ['1\n', 'Spotify User ID\n', 'Spotify Authorization Token\n']
+
+        f.writelines(defaultSettings)
+        f.close()
+
+        f = open("settings.txt", "r")
+        list_of_lines = f.readlines()
+        cameraSetting = list_of_lines[0]
+        userID = list_of_lines[1]
+        authKey = list_of_lines[2]
+
+    return cameraSetting, userID, authKey
 
 
-def getAuthKey():
+def changeSettings(newCameraValue, newUserID, newAuthKey):
     f = open("settings.txt", "r")
     list_of_lines = f.readlines()
-    authKey = list_of_lines[2].replace('Authorization Key = ', '')
 
-    return authKey
-
-
-def getUserID():
-    f = open("settings.txt", "r")
-    list_of_lines = f.readlines()
-    userID = list_of_lines[3].replace('User ID = ', '')
-
-    return userID
-
-
-def changeCamera(newCameraValue):
-    f = open("settings.txt", "r")
-    list_of_lines = f.readlines()
-    list_of_lines[1] = "Camera = " + newCameraValue
-
-    f = open("settings.txt", "w")
-    f.writelines(list_of_lines)
-    f.close()
-
-
-def changeAuthKey(newAuthKey):
-    f = open("settings.txt", "r")
-    list_of_lines = f.readlines()
-    list_of_lines[2] = "Authorization Key = " + newAuthKey
-
-    f = open("settings.txt", "w")
-    f.writelines(list_of_lines)
-    f.close()
-
-
-def changeUserID(newUserID):
-    f = open("settings.txt", "r")
-    list_of_lines = f.readlines()
-    list_of_lines[3] = "User ID = " + newUserID
+    if list_of_lines[0] != newCameraValue:
+        list_of_lines[0] = newCameraValue + '\n'
+    if list_of_lines[1] != newUserID:
+        list_of_lines[1] = newUserID + '\n'
+    if list_of_lines[2] != newAuthKey:
+        list_of_lines[2] = newAuthKey + '\n'
 
     f = open("settings.txt", "w")
     f.writelines(list_of_lines)
