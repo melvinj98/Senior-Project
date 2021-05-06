@@ -47,6 +47,7 @@ def main():
             else:
                 cv2.putText(frame, 'No Face Found', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
 
+        # uncomment to show camera feed
         # cv2.imshow('Emotion Detector', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

@@ -14,15 +14,8 @@ def main(emotion):
     angry_playlist_id = "3uaOn723EyF8eF7GhtJkyD"
     x = 0
 
-
-    #spotify_client = SpotifyClient(os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
-    #                               os.getenv("SPOTIFY_USER_ID"))
-
     spotify_client = SpotifyClient(SPOTIFY_AUTHORIZATION_TOKEN,
                                    SPOTIFY_USER_ID)
-
-    #emotion = input("Input your current emotion(angry,sad,happy,neutral)" +
-     #               " or enter 'q' to quit:").lower()
 
     if emotion == 'Happy':
         playlist_list = spotify_client.get_playlist()
@@ -65,7 +58,7 @@ def main(emotion):
     elif emotion == 'Angry':
         indexes = []
         while x < 5:
-            indexes.insert(x, random.randint(0, 180))
+            indexes.insert(x, random.randint(0, 100))
             x += 1
 
     seed_tracks = [playlist_musics[int(index) - 1] for index in indexes]

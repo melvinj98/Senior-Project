@@ -34,11 +34,6 @@ def settingsMenu():
         if event == 'Exit' or event == sg.WINDOW_CLOSED:
             break
         if event == 'Save':
-            '''
-            settings.changeCamera(values[0])
-            settings.changeUserID(values[1])
-            settings.changeAuthKey(values[2])
-            '''
             settings.changeSettings(values[0], values[1], values[2])
             window.close()
 
