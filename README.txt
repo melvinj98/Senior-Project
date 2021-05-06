@@ -1,10 +1,10 @@
 How to run:
 1) Run pip install virtualenv in command prompt
 2) Change directory to program folder in command prompt
-3) Run env\Scripts\activate in command prompt
-4) Download EmotionDetectionModel.h5 and env from link below and place into program folder
+3) Download EmotionDetectionModel.h5 and env from link below and place into program folder
 	-https://drive.google.com/file/d/1sECnCJMSMRQpz2MrYSb9wi6KbUGYTPv9/view?usp=sharing
-	-https://drive.google.com/drive/folders/16BiW2ycnDkwJERuh8u_6V96q-dgDhDeF?usp=sharing
+	-https://drive.google.com/drive/folders/16BiW2ycnDkwJERuh8u_6V96q-dgDhDeF?usp=sharing 
+4) Run env\Scripts\activate in command prompt
 5) Run python main.py
 6) Go to https://developer.spotify.com/console/get-current-user/
 	-Click get token (no scopes required).
