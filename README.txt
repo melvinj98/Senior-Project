@@ -6,8 +6,7 @@ How to run:
 	-https://drive.google.com/file/d/1sECnCJMSMRQpz2MrYSb9wi6KbUGYTPv9/view?usp=sharing
 5) Run python main.py
 6) Go to https://developer.spotify.com/console/get-current-user/
-	-Click get token.
-	-Check "user-read-private", "user-read-email", "user-read-recently-played".
+	-Click get token (no scopes required).
 	-Press "TRY IT".
 	-Scroll down on the right side and find "id".
 	-Copy the value of "id" 
